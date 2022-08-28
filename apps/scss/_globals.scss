@@ -12,3 +12,56 @@ body {
     font-size: 1rem;
     color: #000;
 }
+
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+    &-jc-c {
+        justify-content: center;
+    }
+    &-ai-c {
+        align-items: center;
+
+        @include breakpoint-down(small){
+
+        }
+    }
+
+    &-col-1 {
+        @include breakpoint-down(small){
+            flex-direction: column;
+        }
+    }
+
+
+    &-col {
+        flex-direction: column;
+        
+        // @include breakpoint-down(small){
+        //     align-items: center;
+        // }
+    }
+
+    &-col-2 {
+        flex-direction: column;
+        
+        @include breakpoint-down(small){
+            align-items: center;
+        }
+    }
+
+    &-col-reverse {
+        @include breakpoint-down(small){
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 1.25rem;
+        }
+    }
+
+
+}
